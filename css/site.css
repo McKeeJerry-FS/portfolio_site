@@ -44,6 +44,23 @@ section {
     justify-content: center; 
 }
 
+a {
+    color : var(--jm-theme-500);
+}
+
+a:hover {
+    color: var(--jm-theme-400);
+}
+
+.btn-bd-primary {
+    --bs-btn-bg: var(--jm-theme-600);
+    --bs-btn-border-color: var(--jm-theme-600);
+    --bs-btn-hover-bg: var(--jm-theme-700);
+    --bs-btn-hover-border-color: var(--jm-theme-700);
+    --bs-btn-active-bg: var(--jm-theme-800)
+    --bs-btn-active-border-color: var(--jm-theme-800);
+}
+
 /* #region Home Section */
 #home {
     background-image: url(/img/space_bg.jpg);
@@ -86,8 +103,79 @@ section {
 }
 /* #endregion Home Section */
 
+/* menuPill */
+#menuPillContainer {
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+}
 
+#menuPill {
+    z-index: 3;
+    margin-left: 1rem;
+}
 
+#menuPill .nav-link {
+    /* override bootstrap's colors */
+    --bs-navbar-active-color: var(--cf-theme-400);
+    --bs-navbar-hover-color: var(--cf-theme-200);
+    --bs-nav-link-hover-color: var(--cf-theme-200);
+
+    /* line up the label and the icon */
+    display: flex;
+    align-items: center;
+
+    /* squish the icons together */
+    padding: 0;
+
+    /* make the nav-link only as big as the icons */
+    max-width: 36px;
+}
+
+#menuPill .icon-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: .5rem;
+}
+
+#menuPill .menu-label {
+    /* don't show the menu labels without hovering */
+    max-width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Desktop Version */
+@media (min-width: 768px) {
+    #menuPill>.nav-item:nth-child(1) .icon-container{
+        border-radius: 50% 50% 0 0;
+    }
+
+    #menuPill>.nav-item:nth-last-child(1) .icon-container {
+        border-radius: 0 0 50% 50%;
+    }
+    
+    #menuPill .nav-link.active {
+        max-width: 300px;
+    }
+
+    #menuPill .menu-label{
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: .5rem 0;
+        border-radius: 0 2rem 2rem 0;
+    }
+
+    #menuPill .nav-link.active .menu-label{
+        max-width: 100%;
+        color: var(--jm-theme-200);
+        padding-right: 1rem;
+    }
+
+    /* Don't round top-right corner when showing label */
+    #menuPill>.nav-item:nth-child(1) .active .icon-container{
+        border-radius: 50% 0 0 0;
+    }
+    
+}
 
 /* #region Footer */
 footer.fixed-bottom {
