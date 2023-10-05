@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Jerry McKee - Full Stack Developer</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="/img/favicon.ico" />
+    <link rel="shortcut icon" type="image/png" href="/img/favicon_jm.ico" />
  
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -51,7 +51,49 @@
         <section id="projects"><h2>Projects</h2></section>
         <section id="challenges"><h2>Challenges</h2></section>
         <section id="blog"><h2>Blog</h2></section>
-        <section id="contact"><h2>Contact</h2></section>
+        <section id="contact">
+            <div class="container mt-5">
+                <h3 class="display-4 text-center">Contact Me</h3>
+                <div class="border border-2 border-info shadow-lg p-2 text-dark bg-light">
+                    <form action="#">
+                         <div class="row">
+                             <div class="col">
+                                 <label class="form-label">First Name</label>
+                                 <input type="text" name="firstName" class="form-control" placeholder="First Name" aria-label="First Name" required>
+                             </div>
+                             <div class="col">
+                                 <label class="form-label">Last Name</label>
+                                 <input type="text" name="lastName" class="form-control" placeholder="Last Name" aria-label="Last Name" required>
+                             </div>
+                         </div>
+                         <div class="row">
+                             <div class="col">
+                                 <label class="form-label">E-Mail</label>
+                                 <input type="email" name="email" class="form-control" placeholder="E-Mail" aria-label="Email" required>
+                             </div>
+                             <div class="col">
+                                 <label class="form-label">Phone</label>
+                                 <input type="tel" name="phone" class="form-control" placeholder="Phone" aria-label="Phone" required>
+                             </div>
+                         </div> 
+                         <div class="row mb-1">
+                             <div class="col">
+                                 <label class="form-label">Subject</label>
+                                 <input type="text" name="subject" class="form-control" placeholder="Subject" aria-label="Subject" required>
+                             </div>
+                         </div>   
+                         <div class="row mb-1">
+                             <div class="col">
+                                 <label class="form-label">Message</label>
+                                 <textarea type="text" name="message" class="form-control" placeholder="Message" aria-label="Message" required>
+                                 </textarea>
+                             </div> 
+                         </div>      
+                             <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                        </form>
+                     </div>
+                 </div>
+        </section>
     </main>
     
     <footer class="bg-dark p-3 container-fluid">
