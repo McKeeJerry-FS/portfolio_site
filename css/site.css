@@ -84,10 +84,33 @@ section {
     height: .5em;
     padding-left: .03em;
 }
-
-
-
 /* #endregion Home Section */
+
+
+
+
+/* #region Footer */
+footer.fixed-bottom {
+    background-color: var(--jm-theme-900);
+    z-index: 2;
+}
+
+footer .card {
+    background-color: var(--jm-theme-800);
+}
+
+footer i.bi {
+    font-size: 2rem;
+    transition: color 0.25s;
+
+}
+
+footer i.bi:hover {
+    color: var(--jm-theme-core);
+}
+
+/* #endregion Footer */
+
 
 
 /* Branding Styles */
@@ -99,3 +122,46 @@ section {
     height: 25px;
     width: 45px;
 }
+
+
+/* #region Media Queries */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .mainTitle {
+        font-size: 7rem;
+        line-height: 5.5rem;
+    }
+    
+    .subTitle {       
+        font-size: 1.7rem;
+        line-height: 1.2rem;
+        letter-spacing: .18rem;
+        
+    }
+    
+    .mainLogo {
+        height: .5em;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
+/* #endregion Media Queries */

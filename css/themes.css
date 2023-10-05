@@ -1,4 +1,4 @@
-root {
+:root {
     /* default theme will be blue */
     --jm-theme-core: var(--jm-blue-core);
     --jm-theme-100: var(--jm-blue-100);
