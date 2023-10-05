@@ -1,17 +1,17 @@
 :root {
     /* default theme will be blue */
-    --jm-theme-core: var(--jm-blue-core);
-    --jm-theme-100: var(--jm-blue-100);
-    --jm-theme-150: var(--jm-blue-150);
-    --jm-theme-200: var(--jm-blue-200);
-    --jm-theme-300: var(--jm-blue-300);
-    --jm-theme-400: var(--jm-blue-400);
-    --jm-theme-500: var(--jm-blue-500);
-    --jm-theme-600: var(--jm-blue-600);
-    --jm-theme-700: var(--jm-blue-700);
-    --jm-theme-800: var(--jm-blue-800);
-    --jm-theme-850: var(--jm-blue-850);
-    --jm-theme-900: var(--jm-blue-900);
+    --jm-theme-core: var(--jm-yellow-core);
+    --jm-theme-100: var(--jm-yellow-100);
+    --jm-theme-150: var(--jm-yellow-150);
+    --jm-theme-200: var(--jm-yellow-200);
+    --jm-theme-300: var(--jm-yellow-300);
+    --jm-theme-400: var(--jm-yellow-400);
+    --jm-theme-500: var(--jm-yellow-500);
+    --jm-theme-600: var(--jm-yellow-600);
+    --jm-theme-700: var(--jm-yellow-700);
+    --jm-theme-800: var(--jm-yellow-800);
+    --jm-theme-850: var(--jm-yellow-850);
+    --jm-theme-900: var(--jm-yellow-900);
     /* #region blue */
     --jm-blue-core: #0d6efd;
     --jm-blue-100: hsl(216, 50%, 91%);

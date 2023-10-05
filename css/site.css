@@ -52,12 +52,12 @@ a:hover {
     color: var(--jm-theme-400);
 }
 
-.btn-bd-primary {
+.btn-primary {
     --bs-btn-bg: var(--jm-theme-600);
     --bs-btn-border-color: var(--jm-theme-600);
     --bs-btn-hover-bg: var(--jm-theme-700);
     --bs-btn-hover-border-color: var(--jm-theme-700);
-    --bs-btn-active-bg: var(--jm-theme-800)
+    --bs-btn-active-bg: var(--jm-theme-800);
     --bs-btn-active-border-color: var(--jm-theme-800);
 }
 
@@ -103,6 +103,16 @@ a:hover {
 }
 /* #endregion Home Section */
 
+/* #region Section styles */
+.section-page:nth-child(odd){
+    background-color: var(--jm-theme-150);
+}
+.section-page:nth-child(even){
+    background-color: var(--jm-theme-100);
+}
+
+/* #endregion Section Styles */
+
 /* menuPill */
 #menuPillContainer {
     position: fixed;
@@ -130,6 +140,7 @@ a:hover {
 
     /* make the nav-link only as big as the icons */
     max-width: 36px;
+    transition: max-width 0.35s ease-in-out
 }
 
 #menuPill .icon-container {
@@ -146,15 +157,39 @@ a:hover {
 
 /* Desktop Version */
 @media (min-width: 768px) {
+    main > section:not(#home) {
+        padding-left: 160px;
+        padding-right: 160px;
+    }
+
+
+    /* round the edges of the pill */
     #menuPill>.nav-item:nth-child(1) .icon-container{
         border-radius: 50% 50% 0 0;
+        transition: border-radius .1s ease-out .25s;
+    }
+
+    /* Don't round top-right corner when showing label */
+    #menuPill>.nav-item:nth-child(1) .active .icon-container,
+    #menuPill>.nav-item:nth-child(1)>.nav-link:hover .icon-container{
+        border-radius: 50% 0 0 0;
+        transition: border-radius 0s ease-out 0s;
     }
 
     #menuPill>.nav-item:nth-last-child(1) .icon-container {
         border-radius: 0 0 50% 50%;
+        transition: border-radius .1s ease-out .25s;
+    }
+
+
+    #menuPill>.nav-item:nth-last-child(1)>.nav-link .active .icon-container,
+    #menuPill>.nav-item:nth-last-child(1)>.nav-link:hover .icon-container{
+        border-radius: 0 0 0 50%;
+        transition: border-radius 0s ease-out 0s;
     }
     
-    #menuPill .nav-link.active {
+    #menuPill .nav-link.active,
+    #menuPill .nav-link:hover {
         max-width: 300px;
     }
 
@@ -162,18 +197,19 @@ a:hover {
         background-color: rgba(0, 0, 0, 0.7);
         padding: .5rem 0;
         border-radius: 0 2rem 2rem 0;
+        /* animate the label into view when hovered over or active */
+        transition: max-width 0.25s ease-in-out, 
+                    padding-right .25s ease-in-out;
     }
 
-    #menuPill .nav-link.active .menu-label{
+    #menuPill .nav-link.active .menu-label,
+    #menuPill .nav-link:hover .menu-label {
         max-width: 100%;
         color: var(--jm-theme-200);
         padding-right: 1rem;
     }
 
-    /* Don't round top-right corner when showing label */
-    #menuPill>.nav-item:nth-child(1) .active .icon-container{
-        border-radius: 50% 0 0 0;
-    }
+    
     
 }
 
