@@ -63,7 +63,7 @@ a:hover {
 
 /* #region Home Section */
 #home {
-    background-image: url(/img/space_bg.jpg);
+    background-image: url(/img/jm-branding/pexels-suzy-hazelwood-1629236.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top left;
@@ -99,6 +99,7 @@ a:hover {
 
 .mainLogo {
     height: .5em;
+    width: 1em;
     padding-left: .03em;
 }
 /* #endregion Home Section */
