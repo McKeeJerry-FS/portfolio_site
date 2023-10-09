@@ -212,9 +212,9 @@ a:hover {
 }
 /* #endregion menuPill Section */
     
+/* #region Footer */
     
 
-/* #region Footer */
 footer.fixed-bottom {
     background-color: var(--jm-cyan-800);
     z-index: 2;
@@ -236,9 +236,9 @@ footer i.bi:hover {
 
 /* #endregion Footer */
 
+/* #region Branding Styles */
+/* Personal styling elements for the portfolio */
 
-
-/* Branding Styles */
 #name_logo {
     height: 35px;
 }
@@ -248,9 +248,11 @@ footer i.bi:hover {
     width: 45px;
 }
 
+/* #endregion Branding Styles */
 
 /* #region Media Queries */
 
+/* Must be at the end of the stylesheet at all times */
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
     .mainTitle {
