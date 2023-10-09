@@ -1,0 +1,108 @@
+/* #region menuPill Section */
+#menuPillContainer {
+    position: fixed;
+    z-index: 3;
+    height: 100%;
+}
+
+#menuPill {
+    z-index: 3;
+    margin-left: 1rem;
+}
+
+#menuPill .nav-link {
+    /* override bootstrap's colors */
+    --bs-navbar-active-color: var(--cf-theme-400);
+    --bs-navbar-hover-color: var(--cf-theme-200);
+    --bs-nav-link-hover-color: var(--cf-theme-200);
+
+    /* line up the label and the icon */
+    display: flex;
+    align-items: center;
+
+    /* squish the icons together */
+    padding: 0;
+
+    /* make the nav-link only as big as the icons */
+    max-width: 36px;
+    transition: max-width 0.35s ease-in-out
+}
+
+#menuPill .icon-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: .5rem;
+}
+
+#menuPill .menu-label {
+    /* don't show the menu labels without hovering */
+    max-width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+    /* Desktop Version */
+@media (min-width: 768px) {
+    main > section:not(#home) {
+        padding-left: 160px;
+        padding-right: 160px;
+    }
+
+
+    /* round the edges of the pill */
+    #menuPill>.nav-item:nth-child(1) .icon-container{
+        border-radius: 50% 50% 0 0;
+        transition: border-radius .1s ease-out .25s;
+    }
+
+    /* Don't round top-right corner when showing label */
+    #menuPill>.nav-item:nth-child(1) .active .icon-container,
+    #menuPill>.nav-item:nth-child(1)>.nav-link:hover .icon-container{
+        border-radius: 50% 0 0 0;
+        transition: border-radius 0s ease-out 0s;
+    }
+
+    #menuPill>.nav-item:nth-last-child(1) .icon-container {
+        border-radius: 0 0 50% 50%;
+        transition: border-radius .1s ease-out .25s;
+    }
+
+
+    #menuPill>.nav-item:nth-last-child(1)>.nav-link .active .icon-container,
+    #menuPill>.nav-item:nth-last-child(1)>.nav-link:hover .icon-container{
+        border-radius: 0 0 0 50%;
+        transition: border-radius 0s ease-out 0s;
+    }
+    
+    #menuPill .nav-link.active,
+    #menuPill .nav-link:hover {
+        max-width: 300px;
+    }
+
+    #menuPill .menu-label{
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: .5rem 0;
+        border-radius: 0 2rem 2rem 0;
+        /* animate the label into view when hovered over or active */
+        transition: max-width 0.25s ease-in-out, 
+                    padding-right .25s ease-in-out;
+    }
+
+    #menuPill .nav-link.active .menu-label,
+    #menuPill .nav-link:hover .menu-label {
+        max-width: 100%;
+        color: var(--jm-theme-200);
+        padding-right: 1rem;
+    }
+}
+
+/* Mobile Version */
+@media (max-width: 767.98px) {
+    #menuPillContainer{
+        top: 0;
+        height: 4rem;
+        width: 100vw;
+        justify-content: center;
+        display: flex;
+    }
+}
+/* #endregion menuPill Section */
