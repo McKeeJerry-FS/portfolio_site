@@ -67,7 +67,7 @@
     }
 
 
-    #menuPill>.nav-item:nth-last-child(1)>.nav-link .active .icon-container,
+    #menuPill>.nav-item:nth-last-child(1)>.nav-link.active .icon-container,
     #menuPill>.nav-item:nth-last-child(1)>.nav-link:hover .icon-container{
         border-radius: 0 0 0 50%;
         transition: border-radius 0s ease-out 0s;

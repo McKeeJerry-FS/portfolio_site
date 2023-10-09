@@ -88,7 +88,7 @@
         </nav>
     </div>
 
-    <main>
+    <main data-bs-spy="scroll" data-bs-target="#menuPill">
         <!-- Home Section -->
         <section id="home">
             <div id="homeCover">
@@ -108,12 +108,27 @@
 
         <!-- About Section -->
         <section id="about" class="section-page">
-            <h2>About Me</h2>
+            <div class="container text-center">
+                <h2 class="display-1 mb-5">About Me</h2>
+                <a href="https://storyset.com/technology" target="_blank" data-bs-toggle="tooltip" data-bs-title="Web Illustrations by Storyset" data-bs-placement="right">
+                    <img src="/img/jm-branding/Programmer-amico.svg" height="250" class="p-3" alt="">
+                </a>
+                
+                
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        I am a software developer based in Northeastern CT. I have been actively working with web development and .NET applications for 3 years. I've worked with different frameworks including Angular, React, ABP, ASP.NET MVC, and Blazor. Take a look at my portfolio work and see if we can work together on your next project.
+                    </div>
+                </div>
+                <a href="/resume.pdf" class="btn btn-primary my-3"> Download Resume</a>
+            </div>
         </section>
 
         <!-- Skills Section -->
         <section id="skills" class="section-page">
-            <h2>Skills</h2>
+            <div class="container">
+                <h2 class="display-2 mb-5 text-center">Skills</h2>
+            </div>
         </section>
 
         <!-- Projects Section -->

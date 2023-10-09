@@ -112,6 +112,11 @@ a:hover {
     background-color: var(--jm-theme-100);
 }
 
+.section-page{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
 /* #endregion Section Styles */
 
 /* #region Footer */
