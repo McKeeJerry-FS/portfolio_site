@@ -12,9 +12,9 @@
 
 #menuPill .nav-link {
     /* override bootstrap's colors */
-    --bs-navbar-active-color: var(--cf-theme-400);
-    --bs-navbar-hover-color: var(--cf-theme-200);
-    --bs-nav-link-hover-color: var(--cf-theme-200);
+    --bs-navbar-active-color: var(--jm-theme-400);
+    --bs-navbar-hover-color: var(--jm-theme-200);
+    --bs-nav-link-hover-color: var(--jm-theme-200);
 
     /* line up the label and the icon */
     display: flex;
@@ -93,6 +93,10 @@
         color: var(--jm-theme-200);
         padding-right: 1rem;
     }
+
+    .nav-tooltip {
+        display: none;
+    }
 }
 
 /* Mobile Version */
@@ -103,6 +107,28 @@
         width: 100vw;
         justify-content: center;
         display: flex;
+    }
+
+    #menuPill {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #menuPill .menu-label{
+        display: none;
+    }
+    
+    #menuPill>.nav-item:nth-child(1) .icon-container {
+        border-radius: 50% 0 0 50%;
+    }
+
+    #menuPill>.nav-item:nth-last-child(1) .icon-container {
+        border-radius: 0 50% 50% 0;
+    }
+
+    .nav-tooltip {
+        --bs-tooltip-color: var(--jm-theme-200);
+        --bs-tooltip-opacity: 0.7;
     }
 }
 /* #endregion menuPill Section */
