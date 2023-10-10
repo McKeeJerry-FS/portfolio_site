@@ -1,0 +1,41 @@
+/* 
+    - hover card images should be 300pxx300px or 225x225
+    - make all hover carads the same size when used in a group
+    - make sure the image is large enough so it doesn't stretch
+    - hover cards are built with square cards in mind
+*/
+
+.hc-wrapper {
+    display: flex;
+    justify-content: center;
+
+}
+
+.hc-card {
+    height: 225px;
+    width: 225px;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+}
+
+.hc-card img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+}
+
+.hc-card .hc-content {
+    z-index: 3;
+    position: relative;
+    color: var(--jm-light-color);
+}
+
+.hc-card .hc-content p {
+    
+}
