@@ -21,6 +21,8 @@
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: flex-end;
+
+    transition: transform 0.3s ease-in-out;
 }
 
 .hc-card::before{
@@ -33,7 +35,11 @@
     height: 100%;
     width: 100%;
     border-radius: 15px;
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out;
 }
+
 
 .hc-card img {
     height: 100%;
@@ -50,10 +56,34 @@
     z-index: 3;
     position: relative;
     color: var(--jm-light-color);
+    transform: translateY(30px);
+    opacity: 0;
+
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .hc-card .hc-content p {
     font-size: .9rem;
     letter-spacing: 1px;
     margin-top: .5em;
+}
+
+.hc-card:hover {
+    transform: translateY(20px);
+}
+
+.hc-card:hover::before {
+    opacity: 1;
+}
+
+.hc-card:hover .hc-content {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .hc-card {
+        height: 300px;
+        width: 300px;
+    }
 }
