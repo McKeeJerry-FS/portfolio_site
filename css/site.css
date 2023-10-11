@@ -97,11 +97,11 @@ a:hover {
     text-transform: uppercase;
 }
 
-.mainLogo {
-    height: .5em;
+/* .mainLogo {
+    height: .8em;
     width: 1em;
-    padding-left: .03em;
-}
+    padding-left: .01em;
+} */
 /* #endregion Home Section */
 
 /* #region Section styles */
