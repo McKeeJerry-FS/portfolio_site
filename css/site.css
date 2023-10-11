@@ -157,7 +157,7 @@ footer.fixed-bottom {
 }
 
 footer .card {
-    background-color: var(--jm-teal-800);
+    background-color: var(--jm-theme-700);
 }
 
 footer i.bi {
