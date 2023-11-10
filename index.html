@@ -818,39 +818,46 @@
                         </div>
                         <div class="col-12 col-lg-7">
                             <h3>Kontact Keeper Pro</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae eligendi eveniet dolorum
-                                ratione nobis repellat cumque ut officiis, cupiditate doloremque sunt nihil repudiandae
-                                alias esse? Velit aliquid soluta molestias aspernatur!
+                            <p class="fs-6">
+                                Keep the contacts in your life organized with our new Kontact Keeper Pro. Create categories to organize your friends, family, colleagues, and so much more. Know that your data is safe with User Authentication provided by Microsoft and that your data is stored securely using the PostgreSQL 16 Database. Create your account and try it out today! 
                             </p>
-                            <p>
-                                Nihil quaerat quo, tempora, officia cum hic, numquam voluptates quam id corporis commodi
-                                quasi reprehenderit error in. Error numquam, natus quia ad voluptatibus, animi non fugit
-                                voluptates, delectus accusantium ab?
+                            <p class="fs-6">
+                                The project is built out using ASP.NET MVC and utilizes Microsoft Identity for User Authentication and Authorization. I utilized Entity Framework Core after creating the needed models to create the entities in a PostgreSQL Databse through migration. This makes this a Code-first Database project since I'm creating the models and relationships first, then through Migrations, create the tables within the database.
+                            </p>
+                            <p class="fs-6">
+                                The project also utilizes an email service built out using MimeKit and MailKit add via nuget packages within the project. The Email Service first allows an email to be sent otu to verify email for registration. The other uses for the email service is to be able to send an email to a single contact or to be able to send emails out to a group of contacts based on the category that is chosen by the User. 
                             </p>
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <h4>Project Type:</h4>
-                                    <span>Web Application</span>
+                                    <span>Web Application utilizing Microsoft Identity and PostgreSQL</span>
                                 </li>
                                 <li class="list-group-item">
                                     <h4>Technologies:</h4>
-                                    <p class="fs-1">
-                                        <i class="devicon-csharp-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="C#"></i>
-                                        <i class="devicon-postgresql-plain-wordmark colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="PostgreSQL"></i>
-                                        <i class="devicon-dotnetcore-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title=".NET Core"></i>
-                                        <i class="devicon-javascript-plain colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="JavaScript"></i>
-                                        <i class="devicon-css3-plain-wordmark colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="CSS3"></i>
-                                        <i class="devicon-bootstrap-plain-wordmark colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Bootstrap5"></i>
-                                        <i class="devicon-html5-plain-wordmark colored" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="HTML5"></i>
-                                        <!-- <figure>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <!-- @* Show Techs here*@ -->
+                                        <figure>
                                             <img src="https://devicons.railway.app/i/dot-net.svg" class="imgicon" />
-                                            <figcaption>ASP.NET</figcaption>
+                                            <!-- <figcaption>ASP.NET</figcaption> -->
+                                        </figure>
+                                        <figure>
+                                            <img src="https://devicons.railway.app/i/csharp.svg" class="imgicon" />
+                                            <!-- <figcaption>C#</figcaption> -->
+                                        </figure>
+                                        <figure>
+                                            <img src="https://devicons.railway.app/i/postgresql.svg" class="imgicon" />
+                                            <!-- <figcaption>Postgres</figcaption> -->
+                                        </figure>
+                                        <figure>
+                                            <img src="https://devicons.railway.app/i/bootstrap.svg" class="imgicon" />
+                                            <!-- <figcaption>Bootstrap</figcaption> -->
                                         </figure>
                                         <figure>
                                             <img src="https://devicons.railway.app/i/railway-dark.svg" class="imgicon" />
-                                            <figcaption>Railway</figcaption>
-                                        </figure> -->
-                                   </p>
+                                            <!-- <figcaption class="text-center">Railway</figcaption> -->
+                                        </figure>
+                                    </div>
+                                    
                                 </li>
                             </ul>
                         </div>
