@@ -34,7 +34,7 @@ function displayBlogData(blogPosts, baseUrl) {
         let blogTitleDiv = blogPostCard.querySelector('[data-blog="title"]');
         blogTitleDiv.innerHTML = blogPost.title;
 
-        let blogDate = new Date(blogPost.dateCreated); // 2009-11-10
+        let blogDate = new Date(blogPost.createdDate); // 2009-11-10
         let month = blogDate.toLocaleString('default', { month: 'long' });
         let day = blogDate.getDate();
 
@@ -62,7 +62,7 @@ function displayBlogData(blogPosts, baseUrl) {
 
         let dateToday = new Date();
         let createdDate = new Date(
-            blogPost.Updated != null ? blogPost.Updated : blogPost.Created
+            blogPost.updated != null ? blogPost.updated : blogPost.createdDate
         );
         let diffTime = Math.abs(dateToday.getTime() - createdDate.getTime());
         let lastUpdated = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
