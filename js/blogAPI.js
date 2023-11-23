@@ -1,7 +1,7 @@
 function fetchBlogData() {
     const baseURL = "https://techtalkblog-production.up.railway.app";
     
-      fetch(`${baseURL}/api/BlogPosts/portfolio/3`)
+      fetch(`${baseURL}/api/BlogPosts/portfolio/5`)
         .then((response) => response.json())
         .then(function (data) {
           displayBlogData(data, baseURL);
