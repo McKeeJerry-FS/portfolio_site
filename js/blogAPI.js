@@ -62,7 +62,7 @@ function displayBlogData(blogPosts, baseUrl) {
 
         let dateToday = new Date();
         let createdDate = new Date(
-            blogPost.updated != null ? blogPost.updated : blogPost.createdDate
+            blogPost.lastUpdated != null ? blogPost.lastUpdated : blogPost.createdDate
         );
         let diffTime = Math.abs(dateToday.getTime() - createdDate.getTime());
         let lastUpdated = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
