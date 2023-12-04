@@ -1,5 +1,5 @@
 function fetchBlogData() {
-    const baseURL = "https://techtalkblog-production.up.railway.app";
+    const baseURL = "https://thetechpulse.up.railway.app";
     
       fetch(`${baseURL}/api/BlogPosts/portfolio/5`)
         .then((response) => response.json())
@@ -25,7 +25,7 @@ function displayBlogData(blogPosts, baseUrl) {
         let imgTag = document.createElement('img');
         imgTag.setAttribute(
             "src",
-            `data:${blogPost.imageType};base64,${blogPost.imageData}`
+            `data:${blogPost.imageData};base64,${blogPost.imageType}`
         );
         imgTag.classList.add('blog-image');
         imageDiv.appendChild(imgTag);
