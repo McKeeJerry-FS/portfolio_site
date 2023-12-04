@@ -1,7 +1,7 @@
 function fetchBlogData() {
     const baseURL = "https://thetechpulse.up.railway.app";
     
-      fetch(`${baseURL}/api/BlogPosts/portfolio/5`)
+      fetch(`${baseURL}/api/BlogPosts/portfolio/3`)
         .then((response) => response.json())
         .then(function (data) {
           displayBlogData(data, baseURL);
