@@ -1,14 +1,14 @@
 function fetchBlogData() {
-    const baseURL = "https://cf-blog-net6.herokuapp.com/";
+    const baseURL = "https://thetechpulse.up.railway.app/";
     
-      fetch(`https://techtalkblog-production.up.railway.app/api/BlogPosts/portfolio/3`)
+      fetch(`${baseURL}/api/BlogPosts/portfolio/3`)
         .then((response) => response.json())
         .then(function (data) {
           displayBlog(data, baseURL);
         });
   }
   
-  function displayBlog(data, baseURL) {
+  function displayBlog(data, _baseURL) {
     //blogs = getData();
   
     let template = document.getElementById("blog-template");
@@ -30,7 +30,7 @@ function fetchBlogData() {
       imageDiv = articleCard.querySelector('[data-blog="imageLink"]');
       imageDiv.setAttribute(
         "href",
-        `http://cf-blog-net6.herokuapp.com/content/${article.slug}`
+        `https://thetechpulse.up.railway.app/content/${article.slug}`
       );
   
       imgTag = document.createElement("img");
@@ -66,7 +66,7 @@ function fetchBlogData() {
       blogLink = articleCard.querySelector("[data-blog='readMoreLink']");
       blogLink.setAttribute(
         "href",
-        `http://cf-blog-net6.herokuapp.com/content/${article.slug}`
+        `https://thetechpulse.up.railway.app/content/${article.slug}`
       );
   
       blogPubDate = articleCard.querySelector("[data-blog='publishedDate']");
