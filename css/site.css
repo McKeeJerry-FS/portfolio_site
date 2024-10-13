@@ -104,7 +104,7 @@ a:hover {
 }
 
 .mainLogo {
-    height: 5rem;
+    height: 75px;
     width: 1em;
     padding-left: .01em;
 }
@@ -210,27 +210,55 @@ footer i.bi:hover {
     }
     
     .mainLogo {
-        height: .5em;
+        height: 7rem;
+        width: 1em;
+        padding-left: .01em;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    
+    .mainLogo {
+        height: 7rem;
+        width: 1em;
+        padding-left: .01em;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
+    .mainLogo {
+        height: 7rem;
+        width: 1em;
+        padding-left: .01em;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+    .mainLogo {
+        height: 7rem;
+        width: 1em;
+        padding-left: .01em;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-
+    .mainLogo {
+        height: 7rem;
+        width: 1em;
+        padding-left: .01em;
+        justify-content: center;
+        align-items: center;
+    }
 }
 /* #endregion Media Queries */
