@@ -29,7 +29,7 @@ function displayBlogData(blogPosts, baseUrl) {
         );
         imgTag.classList.add('blog-image');
         imageDiv.appendChild(imgTag);
-        // <img src="data:image/gif;base64,xxxxxxxxxxxxx..." class="blog-image" alt="...">
+        <img src="data:image/gif;base64,xxxxxxxxxxxxx..." class="blog-image" alt="..."/>
         //add title
         let blogTitleDiv = blogPostCard.querySelector('[data-blog="title"]');
         blogTitleDiv.innerHTML = blogPost.title;
