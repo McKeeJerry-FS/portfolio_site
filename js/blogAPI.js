@@ -25,11 +25,13 @@ function displayBlogData(blogPosts, baseUrl) {
         let imgTag = document.createElement('img');
         imgTag.setAttribute(
             "src",
-            `data:${blogPost.imageData};base64,${blogPost.imageType}`
+            `data:${blogPost.imageType};base64,${blogPost.imageData}`
         );
+        console.log(blogPost.imageType); // Should be something like "image/png"
+        console.log(blogPost.imageData); 
         imgTag.classList.add('blog-image');
         imageDiv.appendChild(imgTag);
-        <img src="data:image/gif;base64,xxxxxxxxxxxxx..." class="blog-image" alt="..."/>
+        // <img src="data:image/gif;base64,xxxxxxxxxxxxx..." class="blog-image" alt="..."/>
         //add title
         let blogTitleDiv = blogPostCard.querySelector('[data-blog="title"]');
         blogTitleDiv.innerHTML = blogPost.title;
