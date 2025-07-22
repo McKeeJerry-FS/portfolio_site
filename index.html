@@ -464,6 +464,29 @@
                         </div>
                     </div>
                 </div>
+                <br />
+                <div class="row row-cols-1 row-cols-lg-3 gy-5">
+                    <h2>Work-Related Projects (Informational Only)</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-lg-3 gy-5">
+                    <div class="col">
+                        <div class="hc-wrapper">
+                            <div class="hc-card">
+                                <picture>
+                                    <source srcset="/img/logos/Mako_Collections.png" media="(min-width: 992px)">
+                                    <img src="/img/logos/Mako_Collections.png" alt="Mako Collections Logo">
+                                </picture>
+                                <div class="hc-content">
+                                    <p>
+                                        A full Stack application that is designed to assist the Collections Team in the daily task and meeting their assigned goals
+                                    </p>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#makoCollectionsModal">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row row-cols-1 row-cols-lg-3 gy-5 mt-3">
                     <h2>.NET Projects</h2>
                 </div>
@@ -1221,47 +1244,35 @@
         </div>
     </div>
 
-    <!-- Blazored Inventory Management Modal -->
-    <div class="modal fade" id="inventoryManagement" tabindex="-1" aria-labelledby="inventoryManagementLabel"
+    <!-- Mako Collections Modal -->
+    <div class="modal fade" id="makoCollectionsModal" tabindex="-1" aria-labelledby="makoCollectionsLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="inventoryManagementModalLabel">Meal Planner AI</h1>
+                    <h1 class="modal-title fs-5" id="makoCollectionsLabel">Mako Collections</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row gy-3">
                         <div class="col-12 col-lg-5">
                             <!-- Carousel with Indicators and Autoplay -->
-                            <div id="mealPlannerCarousel" class="carousel slide" data-bs-ride="carousel"
+                            <div id="makoCarousel" class="carousel slide" data-bs-ride="carousel"
                                 data-bs-theme="dark">
                                 <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#mealPlannerCarousel" data-bs-slide-to="0"
+                                    <button type="button" data-bs-target="#makoCarousel" data-bs-slide-to="0"
                                         class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#mealPlannerCarousel" data-bs-slide-to="1"
+                                    <button type="button" data-bs-target="#makoCarousel" data-bs-slide-to="1"
                                         aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#mealPlannerCarousel" data-bs-slide-to="2"
-                                        aria-label="Slide 3"></button>
-                                    <button type="button" data-bs-target="#mealPlannerCarousel" data-bs-slide-to="3"
-                                        aria-label="Slide 4"></button>
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="/img/logos/Meal_Planner.png" class="d-block w-100"
-                                            alt="Meal Planner AI logo">
+                                        <img src="/img/logos/Mako_Collections.png" class="d-block w-100"
+                                            alt="Mako Collections logo">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="img/screenshots/meal_planner_landing.png" class="d-block w-100"
-                                            alt="Aurora Tracking Dashboard">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="/img/screenshots/meal_planner_createmeal.png" class="d-block w-100"
-                                            alt="Aurora Tracking Projects Index">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="/img/screenshots/meal_planner_createmeal2.png" class="d-block w-100"
-                                            alt="Aurora Tracking File Manager">
+                                        <img src="img/jm-branding/mako_carousel/mako_landing.jpg" class="d-block w-100"
+                                            alt="Mako Collections Landing">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#mealPlannerCarousel"
@@ -1277,43 +1288,41 @@
                             </div>
                         </div>
                         <div class="col-12 col-lg-7">
-                            <h3>Meal Planner AI</h3>
+                            <h3>Mako Collections</h3>
                             <p><strong>
-                                Plan your meals with the power of AI!
+                                Company Developed for: Safe Home Security, Inc
                             </strong>
-                            </p>
+                            <p><strong>
+                                Role in Project: Principle Developer
+                            </strong>
+                            <p><strong>
+                                Year: 2024-2025
+                            </strong>
                             <p>
-                                Are you having difficulty planning meals out each day? Have a bunch of food in the fridge and not sure what you can make with it? With Meal Planner AI, just enter the items you have in the cabinets and in the fridge or freezer and our program will help you plan a delicious meal for you and your family!
-                            </p>
-                            <p>
-                                Utilizing C# and the .NET Framework, including Blazor WebAssembly, I've created a web application that will assist your team during the development lifecycle. With a beautiful, user-friendly, responive layout created utilizing Bootstrap 5 and CSS3, the application is very easy to navigate and easy to use. OpenAI is utilized to help create a list of meals that can be created with a list of ingredients you provide.
-                            </p>
-                            <p class="text-info-emphasis fw-bold">Meal Planner AI is COMING SOON!!!</p>
-                            
+                                This application was designed to act as a Dashboard for the Mako Collections team at Safe Home Security, Inc. The application allows the team to track their collections and manage their accounts. It is built out using Node.js, Express, and EJS Layouts and utilizes an existing Oracle Database for data persistence. I also use HTML, CSS and Bulma to build out each of the responsive, interactive views for the page.
+                            </p>                            
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <h4>Project Type:</h4>
-                                    <span>Blazor WebAssembly Application</span>
+                                    <span>Node.js Application</span>
                                 </li>
                                 <li class="list-group-item">
                                     <h4>Technologies:</h4>
                                     <p class="fs-1">
-                                        <i class="devicon-csharp-plain colored"  data-bs-toggle="tooltip"
-                                            data-bs-placement="bottom" data-bs-title="C#"></i>
-                                        <i data-bs-toggle="tooltip"
-                                            data-bs-placement="bottom" data-bs-title="Blazor WebAssembly">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blazor/blazor-original.svg" height="45" />
-                                            </i>
-                                        <i class="devicon-dotnetcore-plain colored" data-bs-toggle="tooltip"
-                                            data-bs-placement="bottom" data-bs-title=".NET Core"></i>                                       
+                                        <i class="devicon-nodejs-plain-wordmark colored"  data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title="Node.js"></i>
+                                        <i class="devicon-express-original-wordmark colored" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title="Express.js"></i>
                                         <i class="devicon-css3-plain-wordmark colored" data-bs-toggle="tooltip"
                                             data-bs-placement="bottom" data-bs-title="CSS3"></i>
-                                        <i class="devicon-bootstrap-plain-wordmark colored" data-bs-toggle="tooltip"
-                                            data-bs-placement="bottom" data-bs-title="Bootstrap5"></i>
+                                        <i class="devicon-bulma-plain colored" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title="Bulma"></i>
                                         <i class="devicon-html5-plain-wordmark colored" data-bs-toggle="tooltip"
                                             data-bs-placement="bottom" data-bs-title="HTML5"></i>
                                         <i class="devicon-javascript-plain colored" data-bs-toggle="tooltip"
                                             data-bs-placement="bottom" data-bs-title="JavaScript"></i>
+                                        <i class="devicon-knexjs-original colored" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title="Knex.js"></i>
                                     </p>
                                 </li>
                             </ul>
@@ -1322,7 +1331,114 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary"><a href="https://aichef-production-6302.up.railway.app/#" target="_blank">Check It Out!</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Tech Pulse Modal -->
+    <div class="modal fade" id="techTalkModal" tabindex="-1" aria-labelledby="techTalkModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="techTalkModalLabel">Tech Pulse</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row gy-3">
+                        <div class="col-12 col-lg-5">
+                            <!-- Carousel with Indicators and Autoplay -->
+                            <div id="techTalkCarousel" class="carousel slide" data-bs-ride="carousel"
+                                data-bs-theme="dark">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#techTalkCarousel" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#techTalkCarousell" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#techTalkCarousel" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#techTalkCarousel" data-bs-slide-to="3"
+                                        aria-label="Slide 4"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="/img/jm-branding/logos/Tech.svg" class="d-block w-100"
+                                            alt="Insecticide logo">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/Blog/BlogIndexView.png" class="d-block w-100"
+                                            alt="Screenshot 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/img/Blog/BlogCreateView.png" class="d-block w-100"
+                                            alt="Screenshot 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/img/Blog/BlogContactMeView.png" class="d-block w-100"
+                                            alt="Screenshot 3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#techTalkCarousel"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#techTalkCarousel"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <h3>Tech Pulse</h3>
+                            <p>
+                                Check the pulse of what's new in the world of tech and updates in life as a developer, as
+                                well as tips to become a developer yourself!
+                            </p>
+                            <p>This program is built out using ASP.NET Core MVC and C# and utilizes a PostgreSQL Database for data persistence. I also use HTML, CSS and Bootstrap to build out each of the responsive, interactive views for the page. Microservices handle everything from user authorization and authentication to an email service which will allow a user to email the blog author.</p>
+                            <p class="text-info fw-bold">Tech Pulse IS NOW LIVE!!! Please visit and check out the new Blog Site!!!</p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <h4>Project Type:</h4>
+                                    <span>Web Application</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <h4>Technologies:</h4>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <!-- @* Show Techs here*@ -->
+                                        <figure>
+                                            <img src="https://devicons.railway.app/i/dot-net.svg" class="imgicon" />
+                                            <!-- <figcaption>ASP.NET</figcaption> -->
+                                        </figure>
+                                        <figure>
+                                            <img src="https://devicons.railway.app/i/csharp.svg" class="imgicon" />
+                                            <!-- <figcaption>C#</figcaption> -->
+                                        </figure>
+                                        <figure>
+                                            <img src="https://devicons.railway.app/i/postgresql.svg" class="imgicon" />
+                                            <!-- <figcaption>Postgres</figcaption> -->
+                                        </figure>
+                                        <figure>
+                                            <img src="https://devicons.railway.app/i/bootstrap.svg" class="imgicon" />
+                                            <!-- <figcaption>Bootstrap</figcaption> -->
+                                        </figure>
+                                        <figure>
+                                            <img src="https://devicons.railway.app/i/railway-dark.svg"
+                                                class="imgicon" />
+                                            <!-- <figcaption class="text-center">Railway</figcaption> -->
+                                        </figure>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><a
+                        href="https://thetechpulse.up.railway.app/" target="_blank">Check It Out!</a></button>
                 </div>
             </div>
         </div>
