@@ -529,7 +529,24 @@
                         </div>
                     </div>
                     <!-- Empty -->
-                    <div class="col"></div>
+                    <div class="col">
+                        <div class="hc-wrapper">
+                            <div class="hc-card">
+                                <picture>
+                                    <source srcset="/img/logos/BookDragonsLair.png" media="(min-width: 992px)">
+                                    <img src="/img/logos/BookDragonsLair.png" alt="IMS Logo">
+                                </picture>
+                                <div class="hc-content">
+                                    <p>
+                                        A full stack Book Management app built with ASP.NET MVC, C#, PostgreSQL
+                                    </p>
+                                    <p class="text-info">Book Dragon's Lair IS LIVE NOW!!!</p>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#bookDragonModal">Learn More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row row-cols-1 row-cols-lg-3 gy-5 mt-3">
                     <h2>JavaScript Projects</h2>
@@ -1239,6 +1256,109 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary"><a href="https://aichef-production-6302.up.railway.app/#" target="_blank">Check It Out!</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book Dragon's Lair Modal -->
+     <div class="modal fade" id="bookDragonModal" tabindex="-1" aria-labelledby="bookDragonModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="bookDragonModalLabel">Book Dragon's Lair</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row gy-3">
+                        <div class="col-12 col-lg-5">
+                            <!-- Carousel with Indicators and Autoplay -->
+                            <div id="BookDragonCarousel" class="carousel slide" data-bs-ride="carousel"
+                                data-bs-theme="dark">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#mealPlannerCarousel" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#mealPlannerCarousel" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#mealPlannerCarousel" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#mealPlannerCarousel" data-bs-slide-to="3"
+                                        aria-label="Slide 4"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="/img/logos/BookDragonsLair.png" class="d-block w-100"
+                                            alt="Book Dragon's Lair logo">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/screenshots/BookDragonLanding.png" class="d-block w-100"
+                                            alt="Book Dragon's Lair Landing">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/img/screenshots/BookDragonBookList.png" class="d-block w-100"
+                                            alt="Aurora Tracking Projects Index">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/img/screenshots/BookDragonAddBook.png" class="d-block w-100"
+                                            alt="Aurora Tracking File Manager">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#BookDragonCarousel"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#BookDragonCarousel"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-7">
+                            <h3>Book Dragon's Lair</h3>
+                            <p><strong>
+                                Keep Track of your Books and what you want to read next!
+                            </strong>
+                            </p>
+                            <p>
+                                Are you having difficulty keeping track of your reading list? Do you have a bunch of books on your shelf and not sure what to read next? With Book Dragon's Lair, just enter the titles you have in your collection and our program will help you organize your reading list and suggest what to read next!
+                            </p>
+                            <p>
+                                Utilizing C# and .NET Core, including ASP.NET MVC, I've created a web application that will assist users in managing their book collections and reading lists.
+                            </p>
+                            <p class="text-info-emphasis fw-bold">Book Dragon's Lair is NOW LIVE!!!</p>
+
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <h4>Project Type:</h4>
+                                    <span>ASP.NET MVC Application</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <h4>Technologies:</h4>
+                                    <p class="fs-1">
+                                        <i class="devicon-csharp-plain colored"  data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title="C#"></i>
+                                        <i class="devicon-dotnetcore-plain colored" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title=".NET Core"></i>                                       
+                                        <i class="devicon-css3-plain-wordmark colored" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title="CSS3"></i>
+                                        <i class="devicon-bootstrap-plain-wordmark colored" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title="Bootstrap5"></i>
+                                        <i class="devicon-html5-plain-wordmark colored" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title="HTML5"></i>
+                                        <i class="devicon-javascript-plain colored" data-bs-toggle="tooltip"
+                                            data-bs-placement="bottom" data-bs-title="JavaScript"></i>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><a href="https://bookdragon-production.up.railway.app" target="_blank">Check It Out!</a></button>
                 </div>
             </div>
         </div>
