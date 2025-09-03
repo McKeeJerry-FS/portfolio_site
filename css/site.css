@@ -103,6 +103,12 @@ a:hover {
     margin: 0rem .3rem;
 }
 
+.certicon {
+    display: inline;
+    height: 20px;
+    margin: 0rem .3rem;
+}
+
 .mainLogo {
     height: 75px;
     width: 1em;
@@ -188,6 +194,11 @@ footer i.bi:hover {
 #nav_logo{
     height: 25px;
     width: 45px;
+}
+
+.card{
+    background-color: var(--jm-theme-900);
+    color: var(--jm-light-color);
 }
 
 /* #endregion Branding Styles */
