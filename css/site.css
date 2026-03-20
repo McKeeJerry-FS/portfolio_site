@@ -575,6 +575,79 @@ footer a:hover {
 }
 /* #endregion About Carousel */
 
+/* #region Project Modals */
+/* Keep project modal content readable even when site-wide dark text variables are active. */
+.modal .modal-content {
+  color: #1f2430;
+  background: rgba(248, 250, 255, 0.82);
+  -webkit-backdrop-filter: blur(14px) saturate(135%);
+  backdrop-filter: blur(14px) saturate(135%);
+  border: 1px solid rgba(81, 43, 212, 0.24);
+  box-shadow: rgba(7, 8, 14, 0.35) 0px 24px 60px;
+}
+
+.modal .modal-header,
+.modal .modal-footer {
+  background: rgba(255, 255, 255, 0.34);
+  border-color: rgba(81, 43, 212, 0.18);
+}
+
+.modal .modal-title,
+.modal .modal-body,
+.modal .modal-body h3,
+.modal .modal-body h4,
+.modal .modal-body p,
+.modal .modal-body span,
+.modal .modal-body li {
+  color: #212529;
+}
+
+.modal .modal-body .list-group-item {
+  color: #212529;
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(81, 43, 212, 0.18);
+}
+
+.modal .modal-footer .btn {
+  min-width: 9rem;
+}
+
+.modal .modal-footer .btn,
+.modal .modal-footer .btn:hover,
+.modal .modal-footer .btn:focus-visible {
+  color: #fff;
+}
+
+/* Some project modals use anchor tags inside buttons; force readable label styling. */
+.modal .modal-footer .btn a,
+.modal .modal-footer .btn a:hover,
+.modal .modal-footer .btn a:focus-visible {
+  color: inherit !important;
+  text-decoration: none;
+}
+
+/* Normalize all project carousels in modals to a fixed frame like the About carousel. */
+.modal .carousel {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(232, 25, 139, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 10px 24px;
+}
+
+.modal .carousel .carousel-item {
+  aspect-ratio: 4 / 3;
+  background-color: #f4f5f8;
+}
+
+.modal .carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 0.5rem;
+}
+/* #endregion Project Modals */
+
 /* #region Skills Bento */
 @media (min-width: 992px) {
   #skills .skills-bento {
