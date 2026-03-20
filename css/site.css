@@ -75,9 +75,26 @@ a:hover {
   background-image: url(/img/jm-branding/pexels-suzy-hazelwood-1629236.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top left;
+  background-position: center;
   color: var(--jm-light-color);
   position: relative;
+  overflow: hidden;
+}
+
+/* Directional gradient: strong on the left for text legibility, fades right */
+#homeCover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(8, 6, 26, 0.92) 0%,
+    rgba(8, 6, 26, 0.65) 45%,
+    rgba(8, 6, 26, 0.15) 75%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: stretch;
 }
 
 /* Gradient bleed from hero into the first section */
@@ -87,21 +104,69 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
+  height: 220px;
   background: linear-gradient(to bottom, transparent, var(--jm-theme-850));
   pointer-events: none;
   z-index: 2;
 }
 
-#homeCover {
-  position: absolute;
-  -webkit-backdrop-filter: brightness(0.35) blur(5px);
-  backdrop-filter: brightness(0.35) blur(5px);
-  height: 100%;
-  width: 100%;
+/* Two-column hero layout */
+#heroContent {
   display: flex;
+  align-items: flex-end;
   justify-content: center;
-  align-items: center;
+  gap: 6rem;
+  width: 100%;
+  padding: 0 2rem 12rem 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+#heroText {
+  flex: 0 0 auto;
+  max-width: 520px;
+  padding-bottom: 1rem;
+  padding-left: 3rem;
+}
+
+#heroImage {
+  flex: 0 0 auto;
+  align-self: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+#heroHeadshot {
+  height: 48.4vh;
+  max-height: 451px;
+  width: auto;
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+  /* Fade bottom edge into page, fade left edge into gradient overlay */
+  -webkit-mask-image:
+    linear-gradient(to bottom, black 55%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 20%);
+  mask-image:
+    linear-gradient(to bottom, black 55%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 20%);
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+}
+
+/* Stack vertically on mobile */
+@media (max-width: 767.98px) {
+  #heroContent {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 6rem;
+    text-align: center;
+  }
+
+  #heroImage {
+    display: none;
+  }
 }
 
 .mainTitle {
