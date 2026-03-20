@@ -55,3 +55,33 @@
 .blog-article:nth-child(odd) > .blog-row {
   flex-direction: row-reverse;
 }
+
+.blog-status-banner {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 4;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(90deg, #e8198b, #ff5ec4);
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  box-shadow: rgba(232, 25, 139, 0.45) 0px 6px 16px;
+}
+
+.blog-article.blog-unpublished {
+  border-left-color: #ff5ec4;
+  opacity: 0.96;
+}
+
+.blog-article.blog-unpublished .blog-image {
+  filter: brightness(0.6) saturate(0.85);
+}
+
+.blog-article.blog-unpublished [data-blog="readMoreLink"] {
+  pointer-events: none;
+  opacity: 0.6;
+}
