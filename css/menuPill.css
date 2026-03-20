@@ -110,10 +110,14 @@
 @media (max-width: 767.98px) {
   #menuPillContainer {
     top: 0;
-    height: 4rem;
+    height: calc(4.25rem + env(safe-area-inset-top));
     width: 100vw;
     justify-content: center;
     display: flex;
+    padding-top: env(safe-area-inset-top);
+    background: rgba(8, 6, 26, 0.55);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+    backdrop-filter: blur(10px) saturate(140%);
   }
 
   #menuPill {
@@ -123,6 +127,10 @@
 
   #menuPill .menu-label {
     display: none;
+  }
+
+  #menuPill .icon-container {
+    padding: 0.62rem;
   }
 
   #menuPill > .nav-item:nth-child(1) .icon-container {

@@ -1,6 +1,28 @@
 // Scroll reveal — fade + slide up section content as it enters the viewport,
 // fade out when a section leaves.
 document.addEventListener("DOMContentLoaded", () => {
+  const syncViewportHeight = () => {
+    const vh = (window.visualViewport?.height || window.innerHeight) * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  };
+
+  syncViewportHeight();
+  window.addEventListener("resize", syncViewportHeight);
+  window.addEventListener("orientationchange", syncViewportHeight);
+  window.visualViewport?.addEventListener("resize", syncViewportHeight);
+
+  // Improve performance and security for production usage.
+  document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+    link.rel = "noopener noreferrer";
+  });
+
+  document.querySelectorAll("img").forEach((img) => {
+    if (!img.closest("#home")) {
+      img.loading = "lazy";
+      img.decoding = "async";
+    }
+  });
+
   // Tag each section-page itself as the reveal target so we can fade it as a unit
   document.querySelectorAll(".section-page").forEach((section, i) => {
     section.classList.add("scroll-reveal");

@@ -30,6 +30,18 @@ body {
   background-color: var(--jm-background-color);
 }
 
+html {
+  scroll-padding-top: 5rem;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
 h1,
 h2,
 h3,
@@ -48,6 +60,7 @@ section {
   flex-direction: column;
   /* when flex-direction is a column, then justify-content & align-items flip */
   justify-content: center;
+  scroll-margin-top: 5rem;
 }
 
 a {
@@ -72,6 +85,7 @@ a:hover {
 
 /* #region Home Section */
 #home {
+  min-height: calc(var(--vh, 1vh) * 100);
   background-image: url(/img/jm-branding/pexels-suzy-hazelwood-1629236.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -201,6 +215,110 @@ a:hover {
   width: 1em;
   padding-left: 0.01em;
 }
+
+/* Mobile polish layer */
+@media (max-width: 767.98px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  main {
+    padding-top: 4.5rem;
+  }
+
+  section {
+    min-height: auto;
+  }
+
+  #home {
+    min-height: 100dvh;
+  }
+
+  #homeCover {
+    background: linear-gradient(
+      to bottom,
+      rgba(8, 6, 26, 0.9) 0%,
+      rgba(8, 6, 26, 0.72) 55%,
+      rgba(8, 6, 26, 0.42) 100%
+    );
+  }
+
+  #heroContent {
+    gap: 1.5rem;
+    padding: 0 1rem 7.5rem 1rem;
+  }
+
+  #heroText {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .mainTitle {
+    font-size: clamp(3rem, 14vw, 4.75rem);
+    line-height: 0.94;
+  }
+
+  .subTitle {
+    font-size: 0.95rem;
+    letter-spacing: 0.08rem;
+  }
+
+  .section-page {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .display-1 {
+    font-size: clamp(2rem, 9vw, 3.1rem);
+  }
+
+  #about .about-illustration {
+    height: 160px;
+  }
+
+  #about .about-actions .btn {
+    width: min(100%, 320px);
+  }
+
+  #contact form .row {
+    row-gap: 0.75rem;
+  }
+
+  #contact form .btn {
+    width: 100%;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  footer.fixed-bottom {
+    position: static;
+    margin-top: 1.5rem;
+  }
+
+  footer .row {
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer .col-3,
+  footer .col-9 {
+    width: 100%;
+  }
+
+  footer .col-3 img {
+    height: 56px;
+    width: auto;
+  }
+
+  footer .card {
+    width: 100%;
+  }
+}
 /* #endregion Home Section */
 
 /* #region Scroll Reveal */
@@ -237,6 +355,25 @@ a:hover {
 
 .scroll-reveal.is-leaving {
   animation: fadeOut 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal.is-visible,
+  .scroll-reveal.is-leaving {
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
 }
 /* #endregion Scroll Reveal */
 
@@ -336,7 +473,162 @@ footer a:hover {
 
 /* #endregion Branding Styles */
 
-/* #region Media Queries */
+/* #region About Layout */
+#about .about-layout {
+  text-align: left;
+}
+
+#about .about-copy {
+  max-width: 760px;
+}
+
+#about .about-copy > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+#about.is-visible .about-copy > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#about.is-visible .about-copy > *:nth-child(1) {
+  transition-delay: 0.1s;
+}
+#about.is-visible .about-copy > *:nth-child(2) {
+  transition-delay: 0.18s;
+}
+#about.is-visible .about-copy > *:nth-child(3) {
+  transition-delay: 0.26s;
+}
+#about.is-visible .about-copy > *:nth-child(4) {
+  transition-delay: 0.34s;
+}
+#about.is-visible .about-copy > *:nth-child(5) {
+  transition-delay: 0.42s;
+}
+
+#about .about-illustration {
+  height: 220px;
+  width: auto;
+}
+
+#about .about-actions .btn {
+  margin: 0;
+}
+
+#about .about-carousel-wrap {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  #about .about-carousel-wrap {
+    position: sticky;
+    top: 6rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #about .about-layout {
+    text-align: center;
+  }
+
+  #about .about-copy {
+    max-width: 100%;
+  }
+
+  #about .about-actions {
+    justify-content: center;
+  }
+
+  #about .about-carousel-wrap {
+    margin: 0 auto;
+  }
+}
+/* #endregion About Layout */
+
+/* #region About Carousel */
+#carouselExampleIndicators {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(232, 25, 139, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 16px 32px;
+}
+
+/* Lock all slides to a 4:3 box — the largest images' native ratio */
+#carouselExampleIndicators .carousel-item {
+  aspect-ratio: 4 / 3;
+  background-color: var(--jm-theme-900);
+}
+
+/* Contain every image inside the fixed box, centered with padding for portrait shots */
+#carouselExampleIndicators .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 0.5rem;
+}
+/* #endregion About Carousel */
+
+/* #region Skills Bento */
+@media (min-width: 992px) {
+  #skills .skills-bento {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  #skills .skills-bento > [class*="col-"] {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #skills .skills-bento > [class*="col-"]:nth-child(1) {
+    grid-column: span 8;
+  }
+  #skills .skills-bento > [class*="col-"]:nth-child(2) {
+    grid-column: span 4;
+  }
+  #skills .skills-bento > [class*="col-"]:nth-child(3) {
+    grid-column: span 4;
+  }
+  #skills .skills-bento > [class*="col-"]:nth-child(4) {
+    grid-column: span 8;
+  }
+  #skills .skills-bento > [class*="col-"]:nth-child(5) {
+    grid-column: span 12;
+  }
+  #skills .skills-bento > [class*="col-"]:nth-child(6) {
+    grid-column: span 6;
+  }
+  #skills .skills-bento > [class*="col-"]:nth-child(7) {
+    grid-column: span 6;
+  }
+}
+
+#skills .skills-dotnet .icon-card {
+  border-color: rgba(232, 25, 139, 0.55);
+  box-shadow:
+    rgba(0, 0, 0, 0.35) 0px 20px 40px,
+    rgba(232, 25, 139, 0.28) 0px 0px 24px;
+}
+
+#skills .skills-dotnet .icon-card-header {
+  border-bottom-color: rgba(232, 25, 139, 0.4);
+}
+
+#skills .skills-dotnet .icon-card-header > .icon > img,
+#skills .skills-dotnet .icon-card-header .imgicon {
+  transform: scale(1.08);
+}
+/* #endregion Skills Bento */
 
 /* Must be at the end of the stylesheet at all times */
 /* Small devices (landscape phones, 576px and up) */
