@@ -717,6 +717,16 @@ footer a:hover {
     letter-spacing: 0.18rem;
   }
 
+  .tagLine {
+    font-size: 0.9rem;
+    padding-left: 0;
+    border-left: none;
+    border-top: 2px solid var(--jm-accent-pink);
+    margin-top: 0.8rem;
+    padding-top: 0.6rem;
+    max-width: 100%;
+  }
+
   .mainLogo {
     height: 7rem;
     width: 1em;
