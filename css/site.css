@@ -684,6 +684,9 @@ footer a:hover {
   #skills .skills-bento > [class*="col-"]:nth-child(7) {
     grid-column: span 6;
   }
+  #skills .skills-bento > [class*="col-"]:nth-child(8) {
+    grid-column: span 12;
+  }
 }
 
 #skills .skills-dotnet .icon-card {
