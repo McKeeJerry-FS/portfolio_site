@@ -54,6 +54,8 @@ function displayBlogData(blogPosts, baseUrl) {
     imgTag.src = hasApiImage
       ? `data:${blogPost.imageType};base64,${blogPost.imageData}`
       : defaultBlogImage;
+    imgTag.loading = "lazy";
+    imgTag.decoding = "async";
     imgTag.alt = blogPost.title
       ? `${blogPost.title} featured image`
       : "Blog featured image";

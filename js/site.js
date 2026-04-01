@@ -23,6 +23,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  document.querySelectorAll(".modal img[data-src]").forEach((img) => {
+    img.loading = "lazy";
+    img.decoding = "async";
+  });
+
+  const hydrateDeferredImages = (container) => {
+    container.querySelectorAll("img[data-src]").forEach((img) => {
+      if (!img.dataset.src) {
+        return;
+      }
+
+      img.src = img.dataset.src;
+      delete img.dataset.src;
+    });
+  };
+
+  document.querySelectorAll(".modal").forEach((modal) => {
+    modal.addEventListener(
+      "show.bs.modal",
+      () => {
+        hydrateDeferredImages(modal);
+      },
+      { once: true },
+    );
+  });
+
   // Tag each section-page itself as the reveal target so we can fade it as a unit
   document.querySelectorAll(".section-page").forEach((section, i) => {
     section.classList.add("scroll-reveal");

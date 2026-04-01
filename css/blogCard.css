@@ -25,6 +25,14 @@
 .blog-header {
   overflow: hidden;
   position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 992px) {
+  .blog-header {
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
 }
 
 .blog-date {
