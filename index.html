@@ -29,20 +29,31 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="/img/jm-branding/favicon.ico" />
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-
-    <!-- Devicons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
-    <!-- Google Fonts -->
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload LCP hero background so the browser fetches it immediately -->
+    <link rel="preload" as="image" fetchpriority="high" href="/img/jm-branding/pexels-suzy-hazelwood-1629236.jpg" />
+
+    <!-- Bootstrap CSS (render-blocking: required for above-fold layout) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons (non-render-blocking: deferred via print media trick) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" /></noscript>
+
+    <!-- Devicons (non-render-blocking: only used inside hidden modals) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" /></noscript>
+
+    <!-- Google Fonts (trimmed to used families/weights only; removed Allan & Raleway) -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Allan:wght@400;700&family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;700&family=Fira+Sans:wght@300&family=Roboto:wght@400&display=swap"
         rel="stylesheet" />
 
     <!-- custom CSS -->
@@ -151,7 +162,7 @@
                         <a class="btn btn-primary mt-4" href="#contact">LET'S CONNECT!</a>
                     </div>
                     <div id="heroImage">
-                        <img src="/img/jm-branding/about_carousel/headshot.png" alt="Jerry McKee Jr." id="heroHeadshot">
+                        <img src="/img/jm-branding/about_carousel/headshot.jpg" alt="Jerry McKee Jr." id="heroHeadshot" fetchpriority="high" width="950" height="751" decoding="sync">
                     </div>
                 </div>
             </div>
@@ -212,16 +223,16 @@
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="/img/jm-branding/about_carousel/headshot.png" class="d-block w-100"
-                                            alt="My headshot">
+                                        <img src="/img/jm-branding/about_carousel/headshot.jpg" class="d-block w-100"
+                                            alt="My headshot" loading="lazy">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="/img/jm-branding/about_carousel/current_setup.JPEG" class="d-block w-100"
-                                            alt="Current development setup image">
+                                        <img src="/img/jm-branding/about_carousel/current_setup.jpg" class="d-block w-100"
+                                            alt="Current development setup image" loading="lazy">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="/img/jm-branding/about_carousel/first_blog_post.PNG"
-                                            class="d-block w-100" alt="My first blog post">
+                                        <img src="/img/jm-branding/about_carousel/first_blog_post.jpg"
+                                            class="d-block w-100" alt="My first blog post" loading="lazy">
                                     </div>
                                     <div class="carousel-item">
                                         <img src="/img/jm-branding/about_carousel/original_Address_BookMVC.jpg"
